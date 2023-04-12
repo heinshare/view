@@ -1,3 +1,239 @@
-<!DOCTYPEHtml>
-<html>
-</html>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          
+      <title>Popular On iFly</title>
+      
+      <style>
+        
+        html{
+        background-color: #222;
+        }
+        
+        .middle{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width:100%;
+            overflow-x:hidden;
+            overflow-y:scroll;
+        }
+        
+        container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .content{
+            width: 300px;
+            height: 200px;
+            background-color: #ddd;
+            border-radius: 10px;
+        }
+
+        .container div{
+            background-image: linear-gradient(90deg, #ddd 0%, #ddd 40%,#ddd 50%, #ddd 55%,#eee 65%, #eee 100%);
+            background-size: 400%;
+            animation: myanim 1.5s infinite;
+            box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.3);
+		}
+        
+        
+        .flycontainer{
+            display: none;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+        }
+
+        .items{
+            width: 300px;
+            text-align: center;
+            background-color: black;
+            border-radius: 10px;
+            box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.3);
+        }
+
+        .items:hover{
+            border: 2px solid red;
+            transform: scale(1);
+        }
+        .items:active{
+            transform: translateY(5px);
+        }
+        
+        .item-image{
+          object-fit:cover;
+          width:100%;
+          height:200px;
+          border-top-left-radius:10px;
+          border-top-right-radius:10px;
+        }
+
+        .item-title{
+            color:white;
+            font-size: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-top:10px;
+        }
+        .item-desc{
+            color:blue;
+            font-size: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-bottom:10px;
+        }
+        
+        @keyframes myanim{
+            from{background-position: 100%;}
+            to{background-position: 0%;}
+		}
+        
+        @media screen and (max-width: 600px){
+            
+           .container{
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 10px;
+            padding: 10px;
+            }
+            .container .content{
+            width: 150px;
+            height: 200px;
+            background-color: #ddd;
+            border-radius: 10px;
+			}
+            .flycontainer{
+            display: none;
+            grid-template-columns: auto auto;
+            gap: 10px;
+            }
+            .flycontainer .items{
+            width: 150px;
+            text-align: center;
+            background-color: black;
+            border-radius: 10px;
+            box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.3);
+            }
+            .items:hover{
+            border: 2px solid red;
+            transform: scale(1);
+          }
+          .items:active{
+            transform: translateY(5px);
+          }
+	  }
+      
+        
+        </style>
+      
+    </head>
+    
+    <body>
+      
+      
+      <div class="middle">
+
+        <div class="container" id="thumbinals">
+
+          <div class="content"></div>
+          <div class="content"></div>
+          <div class="content"></div>
+          <div class="content"></div>
+          <div class="content"></div>
+          <div class="content"></div>
+          
+        </div><!--container-end-->
+
+        <div class="flycontainer" id="item-container">
+
+          <div class="items" onclick="openLink('gotovideo://0,Anime Movies,Big Brother,none,https://luciferdonghua.in/wp-content/uploads/2023/01/my-senior-brother-is-too-steady-lucifer-donghua.webp,none,none,none,https://v1.pinimg.com/videos/mc/expMp4/b5/66/4c/b5664c9d1f1f170806046a2ede185bb7_t1.mp4,none,none,none');">
+
+            <img class="item-image" src="https://luciferdonghua.in/wp-content/uploads/2022/03/throne-of-seal-shen-yin-wang-zuo-lucifer-donghua.webp"/>
+            <div class="item-title">Throne of Seal [Shen Yin Wang Zuo]</div>
+            <div class="item-desc">Epsiode</div>
+
+          </div><!--items-end-->
+
+          <div class="items" onclick="openLink('gotoimage://0,Anime Movies,Big Brother,none,https://luciferdonghua.in/wp-content/uploads/2023/01/my-senior-brother-is-too-steady-lucifer-donghua.webp,none,none,none,none,none,none,none');">
+
+            <img class="item-image" src="https://luciferdonghua.in/wp-content/uploads/2023/01/my-senior-brother-is-too-steady-lucifer-donghua.webp"/>
+            <div class="item-title">Big Brother</div>
+            <div class="item-desc">Epsiode</div>
+
+          </div><!--items-end-->
+
+          <div class="items">
+
+            <img class="item-image" src="https://luciferdonghua.in/wp-content/uploads/2021/12/swallowed-star-season-2-lucifer-donghua.webp"/>
+            <div class="item-title">Swallowed-Star</div>
+            <div class="item-desc">Epsiode</div>
+
+          </div><!--items-end-->
+
+          <div class="items">
+
+            <img class="item-image" src="https://luciferdonghua.in/wp-content/uploads/2023/01/the-legend-of-sword-domain-season-2-lucifer-donghua-chinese-anime.webp"/>
+            <div class="item-title">The Legend of Sword Domain</div>
+            <div class="item-desc">Epsiode</div>
+
+          </div><!--items-end-->
+
+
+          <div class="items">
+
+            <img class="item-image" src="https://luciferdonghua.in/wp-content/uploads/2021/12/swallowed-star-season-2-lucifer-donghua.webp"/>
+            <div class="item-title">Swallowed-Star</div>
+            <div class="item-desc">Epsiode</div>
+
+          </div><!--items-end-->
+
+          <div class="items">
+
+            <img class="item-image" src="https://luciferdonghua.in/wp-content/uploads/2023/01/the-legend-of-sword-domain-season-2-lucifer-donghua-chinese-anime.webp"/>
+            <div class="item-title">The Legend of Sword Domain</div>
+            <div class="item-desc">Epsiode</div>
+
+          </div><!--items-end-->
+
+        </div><!--flycontainer-end-->
+
+
+        <div class="mid-foot" style="width:100%; height: 50px;"></div>
+
+      </div><!--middle-end-->
+      
+      
+      
+      
+  <script>
+
+  const thumbinals = document.getElementById("thumbinals");
+  const itemcontainer = document.getElementById("item-container");
+
+   setTimeout(hideThumbinals, 2000);
+   
+   function hideThumbinals(){
+     thumbinals.style.display = "none";
+     itemcontainer.style.display = "grid";
+   }
+   
+    function openLink(s){
+       window.open(s);
+    }
+    
+    // window.location.href = 'https://v1.pinimg.com/videos/mc/expMp4/b5/66/4c/b5664c9d1f1f170806046a2ede185bb7_t1.mp4';
+    
+  </script>
+  
+      
+      
+    </body>
+    
+  </html>
